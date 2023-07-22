@@ -48,7 +48,7 @@ html ::-webkit-scrollbar-track ::-webkit-scrollbar-thumb {
   font-size: 3rem;
   gap: 40%;
   color: white;
-  background-color: transparent;
+  background-color: black;
 }
 
 .title {
@@ -63,16 +63,19 @@ html ::-webkit-scrollbar-track ::-webkit-scrollbar-thumb {
   font-size: 4rem;
 }
 
-.navbar, .icons {
+.navbar,
+.icons {
   display: flex;
   gap: 10%;
 }
-.navbar :hover, .icons :hover {
+.navbar :hover,
+.icons :hover {
   color: gray;
   cursor: pointer;
   border-bottom: 0.1rem solid black;
 }
-.navbar #nav-close, .icons #nav-close {
+.navbar #nav-close,
+.icons #nav-close {
   font-size: 5rem;
   cursor: pointer;
   color: gray;
@@ -330,6 +333,44 @@ section {
   border-radius: 50rem;
 }
 
+.product-section {
+  display: flex;
+  align-items: center;
+  justify-self: center !important;
+  flex-wrap: wrap;
+  margin: 16px;
+  margin-top: 84px;
+  margin-left: 32px;
+  height: 100%;
+}
+.product-section h5 {
+  font-size: 24px;
+}
+.product-section p {
+  font-size: 18px;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  justify-self: center !important;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.product:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.prodcut-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px !important;
+  padding-bottom: 16px;
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 2rem;
@@ -349,6 +390,7 @@ section {
 @media (max-width: 768px) {
   .header {
     max-width: 80vw;
+    background-color: transparent;
   }
   .header #menu-btn {
     display: inline-block;
@@ -386,6 +428,9 @@ section {
   .row {
     display: flex;
     flex-direction: column;
+  }
+  .product-section {
+    display: grid;
   }
 }
 @media (max-width: 450px) {
